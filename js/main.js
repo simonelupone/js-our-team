@@ -36,3 +36,13 @@ const teamMembers = [
         img: "img/female3.png"
     }
 ];
+
+// dichiaro le variabili che conterranno gli elementi del dom
+const cardImage = document.getElementById('card-img');
+// console.log('ecco l\'immagine', cardImage);
+const name = document.getElementById('card-img');
+// console.log(name);
+const role = document.getElementById('role');
+// console.log(role);
+const mail = document.getElementById('mail');
+// console.log(mail);
