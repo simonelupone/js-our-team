@@ -71,11 +71,19 @@ const createMemberCard = (member) => {
                                 <div id="mail" class="fs-5"><a
                                     class="text-info link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"" href="">${member.email}</a></div>
                             </div>
-                        </div>`;
-    document.getElementById('members').innerHTML += card;
-    console.log(card);
+                        </div>
+                    </div>`;
+    return card;
 }
 
-for (let i = 0; i < teamMembers.length; i++) {
-    createMemberCard(teamMembers[i]);
+// creo una funzione per stampare gli elementi generati nel dom
+const renderMembers = () => {
+    let cards = '';
+
+    for (let i = 0; i < teamMembers.length; i++) {
+        cards += createMemberCard(teamMembers[i]);
+    }
+
+    document.getElementById('members').innerHTML = cards;
 }
+renderMembers();
