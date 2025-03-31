@@ -58,19 +58,21 @@ const mail = document.getElementById('mail');
  * 
  */
 const createMemberCard = (member) => {
-    const card = `<div class="my-card d-flex gap-4 border bg-dark" style="max-width: 540px;">
+    const card = `<div class="col">
+                        <div class="my-card d-flex gap-4 border bg-dark" style="max-width: 540px;">
 
-                    <div class="img-fluid ">
-                        <img id="card-img" src="./${member.img}" alt="">
-                    </div>
+                            <div class="">
+                                <img id="card-img img-fluid" src="./${member.img}" alt="">
+                            </div>
 
-                    <div class="d-flex flex-column gap-3 mt-2">
-                        <div id="name" class="fw-bold fs-4 text-light">${member.name}</div>
-                        <div id="role" class="fs-5 text-light">${member.role}</div>
-                        <div id="mail" class="fs-5"><a
-                                class="text-info link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"" href="">${member.email}</a></div>
-                </div>`;
-
+                            <div class="d-flex flex-column gap-2 mt-3">
+                                <div id="name" class="fw-bold fs-4 text-light">${member.name}</div>
+                                <div id="role" class="fs-5 text-light">${member.role}</div>
+                                <div id="mail" class="fs-5"><a
+                                    class="text-info link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"" href="">${member.email}</a></div>
+                            </div>
+                        </div>`;
+    document.getElementById('members').innerHTML += card;
     console.log(card);
 }
 
